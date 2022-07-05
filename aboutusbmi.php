@@ -26,40 +26,40 @@ website URL.-->
 		
 
 		th, td {
-				padding: 8px;
-				text-align: left;
-				border-bottom: 1px solid #DDD;
-				}
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #DDD;
+		}
 
-	ul {
-	list-style-type:none;
-	margin:0;
-	padding:0;
-	overflow:hidden;
-    background-color:#957DAD;
-	}
+		ul {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			overflow:hidden;
+   			background-color:#957DAD;
+		}
 
-	li{
-	float:left;
-	}
+		li{
+			float:left;
+		}
 		
-	li a {
-	display:block;
-	color:black;
-	text-align:center;
-	padding:12px 14px;
-	text-decoration:none;
-	}
+		li a {
+			display:block;
+			color:black;
+			text-align:center;
+			padding:12px 14px;
+			text-decoration:none;
+		}
 		
-	li a:hover{
-	background-color:dimgrey;
-	color:white;
-	}	
+		li a:hover{
+			background-color:dimgrey;
+			color:white;
+		}	
 	
-    .navbar-nav>.active>a {
-    background-color: #D291BC;
-    color: white;
-    }			
+   		.navbar-nav>.active>a {
+    			background-color: #D291BC;
+    			color: white;
+    		}			
 
 
 		</style>
@@ -94,6 +94,15 @@ website URL.-->
 		<br><br>
 	<h3 style="border:white; border-width:2px; border-style:solid;"<b><i>GitHub Repository</i></b></h3>
 	<a href="https://github.com/nunaazkrn/BMI" target="_blank">Visit our GitHub!<a>
+		
+		<br><br>
+	<h3 style="border:white; border-width:2px; border-style:solid;"<b><i>Copyright Statement</i></b></h3>
+	<p>Healthopolis respects the rights of all users and copyright holders. Consequently all works
+	   that appear on this website do so with the consent of the copyright holder.</p>
+	<p>No information or data displayed on this site may be reproduced, transmitted or copied
+	   without the express written permission of Healthopolis. Contravention is an infringement
+	   of the Copyright Act and its amendments and may be subject to legal action.</p><br>
+	<p><b>Copyright © 2022 Healthopolis | All rights reserved</b></p>
  
 	
 	</center>
