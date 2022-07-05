@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BMI Calculator</title>
+	<style>
+    *,
+    *:before,
+    *:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+	
+    body{
+    height: 100vh;
+    background: #FEC8D8;
+    }
+	
+	.container{
+    background-color:  #957DAD;
+    padding: 30px 30px;
+    width: 50%;
+    min-width: 400px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+    }
+
+    .container h2{
+	background: #D291BC;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	letter-spacing: 1px;
+	margin-top: -40px;
+	margin-left: -30px;
+	margin-right: -30px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+    }
+	
+	ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+	overflow:hidden;
+    background-color:#957DAD;
+	}
+
+	li{
+	float:left;
+	}
+		
+	li a {
+	display:block;
+	color:black;
+	text-align:center;
+	padding:12px 14px;
+	text-decoration:none;
+	}
+		
+	li a:hover{
+	background-color:dimgrey;
+	color:white;
+	}	
+	
+    .navbar-nav>.active>a {
+    background-color: #D291BC;
+    color: white;
+    }	
+	
+    </style> 	
+	</head>
+	
+	<div>
+	<ul class="navbar-nav">
+		<li class="nav-item active"><a class="active" href="bmi.html" >BMI Calculator</a></li>
+		<li class="nav-item"><a href="aboutusbmi.php" >Details</a></li>
+	</ul>
+	</div>
+	
+	<body style="text-align:center">
+	<div class="container">
+    <h2>BMI Calculator</h2>
+		<script>
+		
+		function calcBMI(){
+			var wt= document.bmiForm.weight.value;
+			var ht= document.bmiForm.height.value;
+		
+			if (wt>0 && ht>0)
+			{
+				bmi= wt / (ht/100 * ht/100);
+				let newbmi= bmi.toFixed(2);
+				document.bmiForm.bmi.value= newbmi;
+			
+				if (bmi <= 18.4)
+				{
+					document.bmiForm.category.value= "Underweight";
+					document.bmiForm.risk.value= "Malnutrition risk";
+				}
+			
+				if (bmi >= 18.5 && bmi <= 24.9)
+				{
+					document.bmiForm.category.value= "Normal weight";
+					document.bmiForm.risk.value= "Low risk";
+				}	
+			
+				if (bmi >= 24.9 && bmi <= 29.9 )
+				{
+					document.bmiForm.category.value= "Overweight";
+					document.bmiForm.risk.value= "Enhanced risk";
+				}
+			
+				if (bmi >= 30 && bmi <= 34.9 )
+				{
+					document.bmiForm.category.value= "Moderately Obese";
+					document.bmiForm.risk.value= "Medium risk";
+				}
+			
+				if (bmi > 34.9 && bmi <= 39.9 )
+				{
+					document.bmiForm.category.value= "Severely Obese";
+					document.bmiForm.risk.value= "High risk";
+				}
+			
+				if (bmi >= 40)
+				{
+					document.bmiForm.category.value= "Very Severly Obese";
+					document.bmiForm.risk.value= "Very high risk";
+				}
+			}
+		}
+		
+		
+        $(document).ready(function () {
+ 
+            $('ul.navbar-nav > li')
+                    .click(function (e) {
+                $('ul.navbar-nav > li')
+                    .removeClass('active');
+                $(this).addClass('active');
+            });
+        });
+
+		
+		</script>
+		
+		<form name="bmiForm">
+		<p><b>Your Weight(kg): </b><input type="text" name="weight" size="10"></p>
+		<p><b>Your Height(cm): </b><input type="text" name="height" size="10"></p>
+		<input type="button" value="Calculate BMI" onClick="calcBMI()"></p><br>
+		<p><b>Your BMI Range (kg/m2): </b><input type="text" name="bmi" size="10"></p>
+		<p><b>BMI Category: </b><input type="text" name="category" size="25"></p>
+		<p><b>Health Risk: </b><input type="text" name="risk" size="25"></p>
+		<input type="reset" value="Reset" />
+		</form>
+	</body>
+	</div>
+</html>
